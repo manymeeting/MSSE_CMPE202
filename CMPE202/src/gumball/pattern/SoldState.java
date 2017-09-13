@@ -2,11 +2,11 @@ package gumball.pattern;
 
 public class SoldState implements State {
 
-    GumballMachine gumballMachine;
+	GumballMachine gumballMachine;
 
-    public SoldState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
-    }
+	public SoldState(GumballMachine gumballMachine) {
+		this.gumballMachine = gumballMachine;
+	}
 
 	public void insertCoins(int coin) {
 		System.out.println("Please wait, we're already giving you a gumball");

@@ -22,9 +22,9 @@ public class HasEnoughCoinsState implements State {
 		gumballMachine.setState(gumballMachine.getSoldState());
 	}
 
-    public void dispense() {
-        System.out.println("No gumball dispensed");
-    }
+	public void dispense() {
+		System.out.println("No gumball dispensed");
+	}
 
 	public String toString() {
 		return "waiting for turn of crank";

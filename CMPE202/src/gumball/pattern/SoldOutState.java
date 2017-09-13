@@ -1,11 +1,11 @@
 package gumball.pattern;
 
 public class SoldOutState implements State {
-    GumballMachine gumballMachine;
+	GumballMachine gumballMachine;
 
-    public SoldOutState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
-    }
+	public SoldOutState(GumballMachine gumballMachine) {
+		this.gumballMachine = gumballMachine;
+	}
 
 	public void insertCoins(int coin) {
 		System.out.println("You can't insert any coins, the machine is sold out");

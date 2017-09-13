@@ -10,18 +10,18 @@ public class HasCoinsState implements State{
 
 	public void insertCoins(int coin) {
 		if (gumballMachine.quarterOnly && coin != GumballMachine.QUARTER)
-    {
-      System.out.println("You can only insert a quarter");
-      return;
-    }
-		
+		{
+			System.out.println("You can only insert a quarter");
+			return;
+		}
+
 		System.out.printf("You inserted a %d cent coin\n", coin);
 		gumballMachine.currentCoins = gumballMachine.currentCoins + coin;
 
-    if (gumballMachine.currentCoins >= gumballMachine.cost)
-    {
-      gumballMachine.setState(gumballMachine.getHasEnoughCoinsState());
-    }
+		if (gumballMachine.currentCoins >= gumballMachine.cost)
+		{
+			gumballMachine.setState(gumballMachine.getHasEnoughCoinsState());
+		}
 	}
 
 	public void ejectCoins() {

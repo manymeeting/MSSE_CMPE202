@@ -10,11 +10,11 @@ public class GumballMachine {
 
 	State state = soldOutState;
 	int count = 0;
-  int cost = 0;
-  int currentCoins = 0;
-  boolean quarterOnly = false;
+	int cost = 0;
+	int currentCoins = 0;
+	boolean quarterOnly = false;
 
-  public static int QUARTER = 25;
+	public static int QUARTER = 25;
 
 	public GumballMachine(int numberGumballs, int cost, boolean quarterOnly) {
 		soldOutState = new SoldOutState(this);
@@ -24,10 +24,10 @@ public class GumballMachine {
 		soldState = new SoldState(this);
 
 		this.count = numberGumballs;
-    this.cost = cost;
-    this.quarterOnly = quarterOnly;
+		this.cost = cost;
+		this.quarterOnly = quarterOnly;
 
- 		if (numberGumballs > 0) {
+		if (numberGumballs > 0) {
 			state = noCoinsState;
 		}
 	}
@@ -65,29 +65,29 @@ public class GumballMachine {
 		state = noCoinsState;
 	}
 
-    public State getState() {
-        return state;
-    }
+	public State getState() {
+		return state;
+	}
 
-    public State getSoldOutState() {
-        return soldOutState;
-    }
+	public State getSoldOutState() {
+		return soldOutState;
+	}
 
-    public State getNoCoinsState() {
-        return noCoinsState;
-    }
+	public State getNoCoinsState() {
+		return noCoinsState;
+	}
 
-		public State getHasCoinsState() {
-        return hasCoinsState;
-    }
+	public State getHasCoinsState() {
+		return hasCoinsState;
+	}
 
-    public State getHasEnoughCoinsState() {
-        return hasEnoughCoinsState;
-    }
+	public State getHasEnoughCoinsState() {
+		return hasEnoughCoinsState;
+	}
 
-    public State getSoldState() {
-        return soldState;
-    }
+	public State getSoldState() {
+		return soldState;
+	}
 
 	public String toString() {
 		StringBuffer result = new StringBuffer();
