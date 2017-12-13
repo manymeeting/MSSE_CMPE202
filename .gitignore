@@ -1,0 +1,14 @@
+# Java
+*.class
+
+# OS X
+.DS_Store
+
+# intelliJ
+.idea/
+*.iml
+out/
+
+
+# Application
+bin/
